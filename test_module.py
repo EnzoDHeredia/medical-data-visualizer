@@ -2,7 +2,6 @@ import unittest
 import medical_data_visualizer
 import matplotlib as mpl
 
-
 # the test case
 class CatPlotTestCase(unittest.TestCase):
     def setUp(self):
@@ -27,7 +26,6 @@ class CatPlotTestCase(unittest.TestCase):
         expected = 13
         self.assertEqual(actual, expected, "Expected a different number of bars chart.")
 
-
 class HeatMapTestCase(unittest.TestCase):
     def setUp(self):
         self.fig = medical_data_visualizer.draw_heat_map()
@@ -45,6 +43,7 @@ class HeatMapTestCase(unittest.TestCase):
         print(actual)
         expected = ['0.0', '0.0', '-0.0', '0.0', '-0.1', '0.5', '0.0', '0.1', '0.1', '0.3', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.2', '0.1', '0.0', '0.2', '0.1', '0.0', '0.1', '-0.0', '-0.1', '0.1', '0.0', '0.2', '0.0', '0.1', '-0.0', '-0.0', '0.1', '0.0', '0.1', '0.4', '-0.0', '-0.0', '0.3', '0.2', '0.1', '-0.0', '0.0', '0.0', '-0.0', '-0.0', '-0.0', '0.2', '0.1', '0.1', '0.0', '0.0', '0.0', '0.0', '0.3', '0.0', '-0.0', '0.0', '-0.0', '-0.0', '-0.0', '0.0', '0.0', '-0.0', '0.0', '0.0', '0.0', '0.2', '0.0', '-0.0', '0.2', '0.1', '0.3', '0.2', '0.1', '-0.0', '-0.0', '-0.0', '-0.0', '0.1', '-0.1', '-0.1', '0.7', '0.0', '0.2', '0.1', '0.1', '-0.0', '0.0', '-0.0', '0.1']
         self.assertEqual(actual, expected, "Expected different values in heat map.")
+
 
 if __name__ == "__main__":
     unittest.main()
